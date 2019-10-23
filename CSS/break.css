@@ -1,0 +1,188 @@
+/* Developed by Pavan Kumar Paluri */
+/* December 2018 */
+
+/**************** AIM ********************/
+/* Applying Breakpoints and necessary manipulations to maintain web page uniformity across all the browser pages on different devices */
+/****************************************/
+
+/*   RANGE : 1200 - 1379  */
+/* For Monster size screens (More than 1200 pixels) */ /* Status: Completed */
+@media only screen and (max-width: 1379px){
+    .mynamesec {
+        width: 100%;
+        padding: 0 2%;
+        padding-left: 60px;
+        font-size: 60%;
+    }
+    
+    .hello{
+        padding-left: 8%;
+        margin-left: auto;
+    }
+    
+    .NAME{
+        padding-left: 8%;
+        margin-left: auto;
+    }
+    
+    .phd{
+         padding-left: 8%;
+        margin-left: auto;
+    }
+    
+    .row{
+        padding: 0 2%;
+        
+    }
+}
+
+
+/*   RANGE : 1071 - 1200  */
+/* Big Screens upto 1200 pixels (for widths smaller than pixel rows) */ /* Status: Completed */
+@media only screen and (max-width: 1200px){
+    .mynamesec {
+        width: 100%;
+        padding: 0 2%;
+        padding-left: 60px;
+        font-size: 60%;
+        }
+    .hello{
+        padding-left: 5%;
+        margin-left: auto;
+    }
+    .NAME{
+        padding-left: 5%;
+        margin-left: auto;
+    }
+		
+	.phd{
+		padding-left: 5%;
+		margin-left: auto;
+	}
+	
+	
+	
+    .row {
+        padding: 0 2%;
+    }
+}
+
+/*   RANGE : 871 - 1071  */
+/* Take off the top right listings */
+@media only screen and (max-width: 1071px){
+    /* Take off the top right listings as it encounters compression */
+    .main-nav{display: none;}
+		
+	.mobile-nav-icon {display: inline-block; }
+	.main-nav {
+		float: left;
+		margin-top: 35px;
+		margin-left: 25px;
+	}
+	.main-nav li{
+		display: block; /* vertically stacked */
+	}
+	
+	.main-nav li a:link,
+	.main-nav li a:visited {
+		display: block;
+		border: 0;
+		padding: 10px 0 ;
+		font-size: 100%;
+	}
+	
+	
+	
+	
+.stick .main-nav { margin-top: 10px; }
+/* for elements inside anchor tags <a> */
+.stick .main-nav li a:link,
+.stick .main-nav li a:visited {
+    padding: 10px 0;
+}
+	.stick .mobile-nav-icon { margin-top: 10px; }
+	.stick .mobile-nav-icon .navigate { color: #555; }
+    .main-nav{display: none;} /* take of the top-right headings when webpage shrinks to less than 480px */
+
+    .app-screen{ width: 40%; }
+
+}
+
+
+
+
+
+/* Ipad config - between 481 and 767 px */
+/* For larger screens/ larger smartphones */
+@media only screen and (max-width: 767px){
+    body{ font-size: 16px; }
+    section {padding: 30px 0;}
+    .row {
+    padding: 0 4%;
+}
+	 .mynamesec {
+        width: 100%;
+        padding: 0 2%;
+        padding-left: 60px;
+        font-size: 60%;
+    }
+    
+    .hello{
+        padding-left: 8%;
+        margin-left: auto;
+    }
+    
+    .NAME{
+        padding-left: 8%;
+        margin-left: auto;
+    }
+    
+    .phd{
+         padding-left: 8%;
+        margin-left: auto;
+    }
+    
+    .row{
+        padding: 0 2%;
+        
+    }
+    .col{ width: 100%; 
+        margin: 0 0 4% 0;
+    } /* columns no longer side by side, instead stacked on one another */
+	
+	.mobile-nav-icon {display: inline-block; }
+	.main-nav {
+		float: left;
+		margin-top: 35px;
+		margin-left: 25px;
+	}
+	.main-nav li{
+		display: block; /* vertically stacked */
+	}
+	
+	.main-nav li a:link,
+	.main-nav li a:visited {
+		display: block;
+		border: 0;
+		padding: 10px 0 ;
+		font-size: 100%;
+	}
+	
+	
+	
+	
+.stick .main-nav { margin-top: 10px; }
+/* for elements inside anchor tags <a> */
+.stick .main-nav li a:link,
+.stick .main-nav li a:visited {
+    padding: 10px 0;
+}
+	.stick .mobile-nav-icon { margin-top: 10px; }
+	.stick .mobile-nav-icon .navigate { color: #555; }
+    .main-nav{display: none;} /* take of the top-right headings when webpage shrinks to less than 480px */
+
+    .app-screen{ width: 40%; }
+
+
+    
+}

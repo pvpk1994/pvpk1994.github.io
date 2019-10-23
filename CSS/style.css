@@ -1,0 +1,600 @@
+/* Developed by Pavan Kumar Paluri */
+/* December 2018 */
+
+/************* AIM ***********/
+/* This CSS style sheet aims at giving proper spacing and make the webpage visually appealing */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* :focus { outline: 0; }
+
+html {
+    background-color: white;
+    color: #555;
+    font-family: 'lato', 'Arial', sans-serif, 'Ubuntu';
+   font-family: 'Ubuntu', sans-serif; 
+    font-weight: 300;
+    font-size: 20px; /* global font-size */
+    text-rendering: optimizeLegibility;
+    
+}
+
+i {
+	font-style: italic;
+}
+
+/* Clearing Float */
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+/* Float clearing ended */
+
+.row{
+    /* the only abs value in pixels */
+    max-width: 1140px;
+    /* For centering */
+    margin: 0 auto 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box{
+    padding: 1%;
+}
+
+
+.mynamesec
+{
+    position: relative;
+    /*border: 2px solid #626060;*/
+    box-sizing: border-box;
+}
+
+.demo{
+    padding: 10px;
+    color: orange;
+    font-weight: lighter;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    font-size: 0;
+   /* transform: translate(-50%, -50%); /* For proper centering of the text box name */
+}
+
+.mynamesec {
+    padding: 10px;
+    color: orange;
+    font-weight: bold;
+        position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    /* translate(x,y); x coordinate in the first arg and y in the second arg */
+    transform: translate(-60%, -110%); /* For proper centering of the text box name */
+}
+
+
+.mynamesec  marquee {
+    line-height: 0.8;
+}
+
+.mynamesec marquee p {
+    margin: 0;
+}
+
+.hello {
+	font-weight: lighter;
+	font-size: 35px;
+	
+}
+
+.phd{
+    font-weight: lighter;
+    color: #d3d1d1;
+    font-size: 15px;
+	padding-top: 20px;
+}
+
+/************ HEADER FORMATTING *************/
+header{
+    background-image: linear-gradient(rgba(0, 0, 0,  0.2), rgba(0, 0, 0, 0.2)),url(images/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+/* for h1 and h2 common */
+h1,h2,h3 {
+    
+    /* Golden Rule: If greater font-size, then lesser font-weight */
+    font-weight: 300;
+    text-transform: uppercase;
+        
+}
+
+/* for h1 only */
+h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #edbdbd; /* giving white on a dark-grey background */
+    font-size: 200%; /* will be 40px, as it has to be a relative, so in % */
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2 {
+      margin-top: 0;
+    margin-bottom: 20px;
+    color: #272121; /* giving white on a dark-grey background */
+    font-size: 200%; /* will be 40px, as it has to be a relative, so in % */
+    word-spacing: 4px;
+    letter-spacing: 1px;
+	text-align: center;
+}
+
+/* Orange Underlines code under each title */
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: orange;
+    /*we do :after, do specify the content */
+    content: " ";
+    width: 100px;
+    /* to center the line */
+    margin: 0 auto;
+    margin-top: 30px; 
+}
+
+.hello {
+    /* Providing an 'absolute' fixes the header onto the webpage */
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+	font-size: 50%;
+    /* to properly center the text in the middle of the page */
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+/* Key Features */
+.Features .long-copy
+{
+   margin-bottom: 30px;
+}
+
+.main-nav {
+    float:right;
+    /* to get rid of bullets */
+    list-style: none;
+    margin-top: 50px;
+}
+
+/* li besides includes all li elements inside ul */
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+    
+}
+
+/* for elements inside anchor tags <a> */
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 8px 0;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s; /* however doing all of this, there is still not enough
+    * space between the text and the border-bottom, so add padding */
+    
+}
+
+.main-nav li a:hover,
+.main-nav li a:active
+{
+    /* giving it a border-bottom highlights only bottom part of the text */
+    border-bottom: 2px solid orange;
+}
+
+
+
+/******** MOBILE NAVIGATION FOR BROWSER RE-SIZING *********/
+
+
+.mobile-nav-icon{
+	float: right;
+	margin-top: 30px;
+	cursor: pointer; /*If no href in a tag, then no cursor appears, so we manually
+					  * set it here ***/
+	display: none;
+}
+
+.mobile-nav-icon .navigate{
+	font-size: 200%;
+	color: #fff;
+}
+
+
+
+
+
+/**************** FOR STICKY NAVIGATION HEADER ******************/
+.stick {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%; /* Should have entire browser width of stick header */
+	background-color: rgba(255, 255, 255, 0.98); /* No opacity */
+	box-shadow: 0 2px 2px #efefef;
+	padding: 10px;
+	/*as we scroll through image section of website the sticky navigation fades off, so we do this */
+	z-index: 9999; /* Defines vertical stacking of elements */
+}
+
+.stick .main-nav { margin-top: 18px; margin-bottom: 5px; }
+
+/* For all the elements inside anchor tags */
+.stick .main-nav li a:link,
+.stick .main-nav li a:visited {
+	padding: 10px 0;
+	color: #555;
+}
+
+.stick { display: none; } /*No display initially, should only appear in the upcoming
+				  * sections */
+.stick { display: block; }
+
+/*   FOR PARAGRAPH CENTERING  */
+
+
+/************* CSS STYLING FOR SCROLL DOWN BUTTONS **************/
+/*
+#section07 a {
+  padding-top: 80px;
+}
+*/
+#section07 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb07 2s infinite;
+  animation: sdb07 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+#section07 a span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+#section07 a span:nth-of-type(2) {
+  top: 16px;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+}
+#section07 a span:nth-of-type(3) {
+  top: 32px;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+@-webkit-keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/****** #SECTION 2 ******/
+
+
+
+/**************** SECTION 2 ABOUT ME ****************/
+.section-steps
+{
+    background-color: #efecec;
+}
+
+/* Does CSS styling on the profile pic section of the page */
+.section-steps:first-child{
+    text-align: right;
+    padding-right: 3%; /* Giving it a fluidic view */
+    /*margin-top: 30px;*/
+}
+
+/********** Now styling on the about me Description *******/
+.section-steps{
+    padding-left: 3%;
+   /* margin-top: 70px;*/
+}
+
+.desc{
+    margin-bottom: 50px;
+}
+
+/*  The :last-of-type selector allows you to target the last occurence of an element within its container. */
+/* For example: here, 3rd point is the last occurence */
+/* So the distance between the 3rd point and app-store icons is now 80px, more than regular bottom margin of 50px */
+
+.desc {
+    padding: 2%;
+    font-style: 'Ubuntu';
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+    
+}
+
+
+
+.prfpic{
+    /*width:40%;*/
+  /* height: 40px; */
+   /* border-radius: 50%;*/
+    border-radius: 10px;
+    box-shadow: 0 8px 8px #beb9b9;
+    vertical-align: middle;
+}
+
+
+/************************ SECTION 3 **********************/
+/****************** PUBLICATIONS ************************/
+
+.publications{
+}
+.authors{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/*  The :last-of-type selector allows you to target the last occurence of an element within its container. */
+/* For example: here, 3rd point is the last occurence */
+/* So the distance between the 3rd point and app-store icons is now 80px, more than regular bottom margin of 50px */
+.authors:last-of-type{
+    margin-bottom: 80px;
+}
+.authors div{
+    color: orange;
+    border: 2px solid orange;
+    display: inline-block; /* Ensures element doesnt enforce line break */
+    border-radius: 50%; /* circular in shape */
+    height: 55px;
+    width: 50px;
+    text-align: center; 
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+
+/******************* PROFILE SECTION *********************/
+/********************************************************/
+.Profile{
+    background-color: #efecec;
+}
+
+
+/* Adjusting icons and it's sizes */
+/********** ICONS ***********/
+.icon-big{
+    font-size: 300%;
+    display: block;
+    color: orange;
+    /* padding: 50px; */
+    padding: 10px 50px; /* top-bottom   left-right */
+}
+
+/* To bring all icons to the center */
+.centering{
+     padding: 30px 70px; /* top-bottom   left-right */
+}
+
+/********* PARAGRAPHS ********/
+.long-copy{
+ line-height: 145%;
+    width: 70%; /* no longer will be centered */
+    margin-left: 15%;
+    padding: 10px 70px; /* top-bottom   left-right */
+    padding-bottom: 10px;
+    padding-top: 10px;
+	text-align: center;
+}
+
+.sizing{
+    display: inline-block;
+    padding: 0px 0px; /* Top-Bottom Right-Left */
+    /* Now, we want to have a smooth transition of color change when hovering,
+       So we use 'transition' feature with following attributes */
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.sizing:link,
+.sizing:visited{
+    background-color: black;
+    /*border: 1px solid orange;*/
+   /* color: white; */
+    margin-right: 15px;
+}
+
+/* HOVER: what color it gets or what property it takes on mouse pointing on that button */
+/* Active: without mouse pointer, how it looks */
+.sizing:hover,
+.sizing:active {
+    cursor: pointer;
+    background-color: #fdfbfb;
+}
+
+/* Customizing every color of the icon specific to that icon */
+
+.facebook,
+.github,
+.googlescholar,
+.linkedin{
+    transition: color: 0.2s;
+}
+
+.facebook:hover{
+    color: #3b5998;
+}
+.googlescholar:hover{
+    color: #009dff;
+}
+
+.linkedin:hover{
+    color:  #0e76a8;
+}
+
+.github:hover{
+    color: #333;
+}
+
+
+/*** FINAL FOOTER SECTION ***/
+
+footer{
+    background: #332e2e;
+    padding: 40px;
+    font-size: 80%;
+}
+
+.footer-nav{
+    float:left;
+}
+
+.social-links{
+    list-style: none;
+    float: right;
+}
+
+/* Side by side display enabling */
+.footer-nav,
+.social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* giving it 20 px in between distance between li elements gives unnecessary distance between last child and border of the browser */
+/* hence ---- */
+.footer-nav,
+.social-links li:last-child{
+    margin-right: 0;
+}
+
+.footer-nav a:link,
+.footer-nav a:visited,
+.social-links li a:link,
+.social-links li a:visited{
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover,
+.footer-nav a:active{
+    color: #ddd;
+}
+
+
+/* Giving color and cool effects to social links */
+.social-links li a:link,
+.social-links li a:visited {
+    font-size:200%
+}
+
+.quora,
+.instagram,
+.twitter{
+    transition: color: 0.2s;
+}
+
+.twitter:hover{
+    color: #1da1f2;
+}
+
+.instagram:hover{
+    color: #c32aa3;
+}
+
+.fa{
+    font-size: 60%;
+}
+.quora:hover{
+    color: #aa2200;
+}
+
+/* paragraph format inside footer */
+footer p{
+    color: #888;
+    text-align: center;
+   
+    margin-top: 30px;
+}
+
+
+
+/********** ALL ANIMNATIONS **************/
+.js-wp1,
+.js-wp2,
+.js-wp3,
+.js-wp4,
+.js-wp5,
+.js-wp6,
+.js-wp7,
+.js-wp8,
+.js-name,
+.js-phd { 
+	opacity: 0;
+	animation-duration: 1s;
+}
+
+.js-wp1 .animated,
+.js-wp2 .animated,
+.js-wp3 .animated,
+.js-wp4 .animated,
+.js-wp5 .animated,
+.js-wp6 .animated,
+.js-wp7 .animated,
+.js-wp8 .animated,
+.js-name .animated,
+.js-phd .animated {
+	opacity: 1;
+}
