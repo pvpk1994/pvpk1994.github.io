@@ -384,6 +384,10 @@ h2:after {
     margin-bottom: 50px;
 }
 
+.blink {
+	animation: blink 1s steps(1, end) infinite;
+}
+
 /*  The :last-of-type selector allows you to target the last occurence of an element within its container. */
 /* For example: here, 3rd point is the last occurence */
 /* So the distance between the 3rd point and app-store icons is now 80px, more than regular bottom margin of 50px */
