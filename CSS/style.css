@@ -388,16 +388,19 @@ h2:after {
 	animation: blink 1s steps(1, end) infinite;
 }
 
-.redText
-    {
+.redText {
         color:red;
-    }
-    .blackText
-    {
+	font-weight:bold;
+}
+
+.blackText {
         color:black;
         font-weight:bold;
 }
 
+.blueText {
+	color:blue;
+}
 
 
 
