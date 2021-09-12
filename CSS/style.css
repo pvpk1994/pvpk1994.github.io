@@ -402,6 +402,10 @@ h2:after {
 	color:blue;
 }
 
+.greenText {
+	color:green;
+	font-weight:bold;
+}
 
 
 /*  The :last-of-type selector allows you to target the last occurence of an element within its container. */
